@@ -322,9 +322,6 @@ bm_reactions:
       - 0.1
       pair_radii:
       - 3.0
-compartments:
-  path: Compartments/DendriticSpine.obj
-  mesh_scale: 500.0
 release_site:
   Volume:
     timepoint: 1000
