@@ -1,0 +1,317 @@
+general:
+  box_lengths:
+  - 250.0
+  - 250.0
+  - 350.0
+  dt: 0.1
+  Temp: 293.15
+  eta: 1e-21
+  stride: 100
+  write_trajectory: true
+  file_path: Files/
+  file_name: Large_Toy_Model
+  fig_path: Figures/
+  boundary_condition: periodic
+  nsteps: 10000.0
+  seed: 1000
+  length_unit: nanometer
+  time_unit: ns
+particles:
+  Core_1:
+    radius: 1.5
+  Core_1a:
+    radius: 1.5
+  Patch_1:
+    radius: 0.0
+  Patch_2:
+    radius: 0.0
+  Core_2:
+    radius: 2.5
+  Core_2a:
+    radius: 2.5
+  Core_3:
+    radius: 1.0
+  Core_4:
+    radius: 0.5
+  Core_5:
+    radius: 0.75
+  Core_6:
+    radius: 0.75
+  Patch_3:
+    radius: 0.0
+molecules:
+  A:
+    positions:
+      type: coordinates
+      coordinates:
+      - - 0.0
+        - 0.0
+        - 1.5
+      - - 0.0
+        - 0.0
+        - -1.5
+      - - -1.5
+        - 0.0
+        - 1.5
+      - - 1.5
+        - 0.0
+        - -1.5
+      particles:
+      - Core_1
+      - Core_1
+      - Patch_1
+      - Patch_2
+      diffusion_tensor:
+  B:
+    positions:
+      type: evenly_on_sphere
+      sphere:
+        num_points: 5
+        radius: 2.5
+      particles:
+      - Core_2
+      - Patch_1
+      - Patch_1
+      - Patch_1
+      - Patch_1
+      diffusion_tensor:
+  B2:
+    positions:
+      type: coordinates
+      coordinates:
+      - - 0.0
+        - 0.0
+        - 1.5
+      - - 0.0
+        - 0.0
+        - -2.5
+      - - -1.5
+        - 0.0
+        - 1.5
+      - - 1.5
+        - 0.0
+        - 1.5
+      - - 2.5
+        - 0.0
+        - -2.5
+      particles:
+      - Core_1a
+      - Core_2a
+      - Patch_1
+      - Patch_1
+      - Patch_2
+      diffusion_tensor:
+  C:
+    positions:
+      type: coordinates
+      coordinates:
+      - - 0.0
+        - 0.0
+        - 0.0
+      particles:
+      - Core_3
+      diffusion_tensor:
+      collision_type: 1
+  D:
+    positions:
+      type: coordinates
+      coordinates:
+      - - 0.0
+        - 0.0
+        - 0.0
+      particles:
+      - Core_4
+      diffusion_tensor:
+      collision_type: 1
+interactions:
+  harmonic_repulsion:
+  - particle_1: Core_1
+    particle_2: Core_1
+    parameters:
+      k: 100.0
+    bond: false
+  - particle_1: Core_1
+    particle_2: Core_2
+    parameters:
+      k: 100.0
+    bond: false
+  - particle_1: Core_2
+    particle_2: Core_2
+    parameters:
+      k: 100.0
+    bond: false
+bp_reactions:
+  enzymatic:
+    educt:
+    - Patch_2
+    - Core_6
+    product:
+    - Patch_3
+    - Core_6
+    rpair_rates: 1.0
+    pair_Radii: 3.0
+  bind:
+  - educt:
+    - Patch_1
+    - Patch_3
+    product:
+    - Patch_1
+    - Patch_3
+    rate: 10.0
+    radius: 2.0
+    interaction: harmonic_attraction
+    interaction_parameters:
+      k: 100.0
+      h: 50.0
+      rc: 2.0
+  - educt:
+    - Patch_1
+    - Patch_2
+    product:
+    - Patch_1
+    - Patch_2
+    rate: 10.0
+    radius: 2.0
+    interaction: harmonic_attraction
+    interaction_parameters:
+      k: 100.0
+      h: 50.0
+      rc: 2.0
+  - educt:
+    - Patch_1
+    - Patch_1
+    product:
+    - Patch_1
+    - Patch_1
+    rate: 10.0
+    radius: 2.0
+    interaction: harmonic_attraction
+    interaction_parameters:
+      k: 100.0
+      h: 50.0
+      rc: 2.0
+  - educt:
+    - Patch_2
+    - Patch_3
+    product:
+    - Patch_2
+    - Patch_3
+    rate: 10.0
+    radius: 2.0
+    interaction: harmonic_attraction
+    interaction_parameters:
+      k: 100.0
+      h: 50.0
+      rc: 2.0
+  - educt:
+    - Patch_2
+    - Patch_2
+    product:
+    - Patch_2
+    - Patch_2
+    rate: 10.0
+    radius: 2.0
+    interaction: harmonic_attraction
+    interaction_parameters:
+      k: 100.0
+      h: 50.0
+      rc: 2.0
+  - educt:
+    - Patch_3
+    - Patch_3
+    product:
+    - Patch_3
+    - Patch_3
+    rate: 10.0
+    radius: 2.0
+    interaction: harmonic_attraction
+    interaction_parameters:
+      k: 100.0
+      h: 50.0
+      rc: 2.0
+up_conversion:
+  educt: Patch_1
+  rate: 10.0
+  product:
+  - Patch_2
+bm_reactions:
+  fusion:
+    educt_molecules:
+    - B
+    - B
+    product_molecule:
+    - A
+    educt_particle_pairs:
+    - - Core_2
+      - Core_2
+    reaction_rates:
+    - 0.1
+    - 0.1
+    reaction_radii:
+    - 5.0
+    - 5.0
+  enzymatic_mol:
+    educt_types:
+    - C
+    - E
+    product_types:
+    - F
+    - E
+    particle_pairs:
+    - - Core_3
+      - Core_5
+    pair_rates:
+    - 0.1
+    pair_Radii:
+    - 3.0
+compartments:
+  path: Compartments/DendriticSpine.obj
+  mesh_scale: 500.0
+release_site:
+  Volume:
+    timepoint: 1000
+    compartment_number: 0
+    Number:
+    - 300
+    - 50
+    Types:
+    - C
+    - D
+    origin:
+    - 0.0
+    - 0.0
+    - 24.5
+    jitter: 1.0
+loadcheckpoints:
+  directory: Large_Toy_Model
+  file: 0
+observations:
+  measure: Force
+  molecules:
+  - A
+  - B
+  - B2
+  - C
+  - D
+  obs_stride: 100
+  binned: false
+run:
+  progress_stride: 1000
+  out_linebreak: false
+evaluation:
+  measure: Reactions
+  molecules:
+  - A
+  - B
+  - C
+  step: 10
+  save_fig: true
+  bond_pairs: All
+  Reaction_Type: bind
+  educt: Patch_1+Patch_3
+  particle_educt: Core_1+Core_2a
+plots:
+  type: mobility_matrix
+  save_fig: true
+  potentials:
+  molecule: A
