@@ -348,6 +348,37 @@ release_sites:
       triangle:
         compartment: 1
         triangle_id: 50
+molecule_distributions:
+    - method: 'PDS uniform'
+      location: 'Volume'
+      compartment: 0
+      molecules:
+        'B': 2000
+      multiplier: 50
+    - method: 'PDS uniform'
+      location: 'Volume'
+      compartment: 1
+      molecules:
+        'B': 500
+      multiplier: 50
+    - method: 'MC'
+      location: 'Surface'
+      compartment: 1
+      molecules:
+        'A': 200
+        'B': 200
+    - method: 'PDS uniform'
+      location: 'Volume'
+      compartment: 2
+      molecules:
+        'B': 500
+      multiplier: 50
+    - method: 'PDS'
+      location: 'Surface'
+      compartment: 2
+      molecules:
+        'A': 200
+        'B': 200
 observe_rdf:
   rdf_pairs:
   - - A
