@@ -337,6 +337,17 @@ release_sites:
       - 0.0
       - 24.5
       jitter: 1.0
+  Surface:
+    - timepoint: 2000
+      compartment: 1
+      Number:
+      - 500
+      Types:
+      - D
+      jitter: 5.0
+      triangle:
+        compartment: 1
+        triangle_id: 50
 loadcheckpoints:
   directory: Large_Toy_Model
   file: 0
