@@ -322,21 +322,21 @@ bm_reactions:
       - 0.1
       pair_radii:
       - 3.0
-release_site:
+release_sites:
   Volume:
-    timepoint: 1000
-    compartment_number: 0
-    Number:
-    - 300
-    - 50
-    Types:
-    - C
-    - D
-    origin:
-    - 0.0
-    - 0.0
-    - 24.5
-    jitter: 1.0
+    - timepoint: 1000
+      compartment: 0
+      Number:
+      - 300
+      - 50
+      Types:
+      - C
+      - D
+      origin:
+      - 0.0
+      - 0.0
+      - 24.5
+      jitter: 1.0
 loadcheckpoints:
   directory: Large_Toy_Model
   file: 0
