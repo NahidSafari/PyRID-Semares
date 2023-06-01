@@ -348,9 +348,6 @@ release_sites:
       triangle:
         compartment: 1
         triangle_id: 50
-loadcheckpoints:
-  directory: Large_Toy_Model
-  file: 0
 observe_rdf:
   rdf_pairs:
   - - A
