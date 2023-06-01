@@ -1,0 +1,98 @@
+general:
+  box_lengths:
+  - 250.0
+  - 250.0
+  - 350.0
+  dt: 10.0
+  Temp: 293.15
+  eta: 1e-21
+  stride: 100
+  write_trajectory: true
+  file_path: Files/
+  file_name: Fixed_Concentration
+  fig_path: Figures/
+  boundary_condition: fixed concentration
+  nsteps: 100000.0
+  seed: 0
+  length_unit: nanometer
+  time_unit: ns
+particles:
+  Core_0:
+    radius: 2.5
+  Core_1:
+    radius: 2.5
+  Core_2:
+    radius: 2.5
+molecules:
+  A:
+    positions:
+      type: coordinates
+      coordinates:
+      - - 0.0
+        - 0.0
+        - 0.0
+      particles:
+      - Core_0
+  B:
+    positions:
+      type: coordinates
+      coordinates:
+      - - 0.0
+        - 0.0
+        - 0.0
+      particles:
+      - Core_1
+  C:
+    positions:
+      type: coordinates
+      coordinates:
+      - - 0.0
+        - 0.0
+        - 0.0
+      particles:
+      - Core_2
+concentration:
+- type: fixed_at_boundary
+  molecule: A
+  concentration: 0.01
+  compartment: Box
+  location: Volume
+- type: fixed_at_boundary
+  molecule: B
+  concentration: 0.01
+  compartment: Postsynapse
+  location: Volume
+- type: fixed_at_boundary
+  molecule: C
+  concentration: 0.01
+  compartment: Postsynapse
+  location: Surface
+compartments:
+  path: Compartments/Synapse.obj
+  mesh_scale: 500.0
+observations:
+  measure: Number
+  molecules:
+  - A
+  - B
+  - C
+  obs_stride: 100
+run:
+  progress_stride: 1000
+  out_linebreak: false
+evaluation:
+  measure: Number
+  molecules:
+  - A
+  - B
+  - C
+  save_fig: true
+plots:
+- type: mobility_matrix
+  molecule: A
+- type: mobility_matrix
+  molecule: B
+- type: mobility_matrix
+  molecule: C
+- type: compartments
+  save_fig: true
