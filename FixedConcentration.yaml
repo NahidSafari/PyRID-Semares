@@ -64,9 +64,6 @@ concentration:
   concentration: 0.01
   compartment: Postsynapse
   location: Surface
-compartments:
-  path: Compartments/Synapse.obj
-  mesh_scale: 500.0
 observations:
   measure: Number
   molecules:
