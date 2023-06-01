@@ -234,94 +234,94 @@ up_reactions:
       - Patch_2
 bm_reactions:
   fusion:
-  - educt_molecules:
+  - educt:
     - B
     - B
-    product_molecule:
+    product:
     - A
-    educt_particle_pairs:
-    - - Core_2
-      - Core_2
-    reaction_rates:
-    - 0.1
-    - 0.1
-    reaction_radii:
-    - 5.0
-    - 5.0
-  - educt_molecules:
-    - B
-    - B
-    product_molecule:
-    - C
-    educt_particle_pairs:
-    - - Core_2
-      - Core_2
-    reaction_rates:
-    - 0.1
-    reaction_radii:
-    - 5.0
-  - educt_molecules:
-    - B
-    - B
-    product_molecule:
-    - C
-    educt_particle_pairs:
-    - - Core_2
-      - Core_2
-    reaction_rates:
-    - 0.05
-    reaction_radii:
-    - 5.0
-  - educt_molecules:
-    - A
-    - B
-    product_molecule:
-    - B2
-    educt_particle_pairs:
-    - - Core_1
-      - Core_2
-    reaction_rates:
-    - 0.01
-    reaction_radii:
-    - 5.0
-  - educt_molecules:
-    - A
-    - B2
-    product_molecule:
-    - C
-    educt_particle_pairs:
-    - - Core_1
-      - Core_2a
-    reaction_rates:
-    - 0.01
-    reaction_radii:
-    - 5.0
-  - educt_molecules:
-    - A
-    - B2
-    product_molecule:
-    - B2
-    educt_particle_pairs:
-    - - Core_1
-      - Core_1a
-    reaction_rates:
-    - 0.05
-    reaction_radii:
-    - 5.0
-  enzymatic_mol:
-    educt_types:
-    - C
-    - E
-    product_types:
-    - F
-    - E
     particle_pairs:
-    - - Core_3
-      - Core_5
+    - - Core_2
+      - Core_2
     pair_rates:
     - 0.1
-    pair_Radii:
-    - 3.0
+    - 0.1
+    pair_radii:
+    - 5.0
+    - 5.0
+  - educt:
+    - B
+    - B
+    product:
+    - C
+    particle_pairs:
+    - - Core_2
+      - Core_2
+    pair_rates:
+    - 0.1
+    pair_radii:
+    - 5.0
+  - educt:
+    - B
+    - B
+    product:
+    - C
+    particle_pairs:
+    - - Core_2
+      - Core_2
+    pair_rates:
+    - 0.05
+    pair_radii:
+    - 5.0
+  - educt:
+    - A
+    - B
+    product:
+    - B2
+    particle_pairs:
+    - - Core_1
+      - Core_2
+    pair_rates:
+    - 0.01
+    pair_radii:
+    - 5.0
+  - educt:
+    - A
+    - B2
+    product:
+    - C
+    particle_pairs:
+    - - Core_1
+      - Core_2a
+    pair_rates:
+    - 0.01
+    pair_radii:
+    - 5.0
+  - educt:
+    - A
+    - B2
+    product:
+    - B2
+    particle_pairs:
+    - - Core_1
+      - Core_1a
+    pair_rates:
+    - 0.05
+    pair_radii:
+    - 5.0
+  enzymatic_mol:
+    - educt:
+      - C
+      - E
+      product:
+      - F
+      - E
+      particle_pairs:
+      - - Core_3
+        - Core_5
+      pair_rates:
+      - 0.1
+      pair_radii:
+      - 3.0
 compartments:
   path: Compartments/DendriticSpine.obj
   mesh_scale: 500.0
