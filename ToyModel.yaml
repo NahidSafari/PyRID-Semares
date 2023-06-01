@@ -226,11 +226,12 @@ bp_reactions:
     - Core_6
     rpair_rates: 1.0
     pair_Radii: 3.0
-up_conversion:
-  educt: Patch_1
-  rate: 10.0
-  product:
-  - Patch_2
+up_reactions:
+  conversion:
+    - educt: Patch_1
+      rate: 10.0
+      product:
+      - Patch_2
 bm_reactions:
   fusion:
   - educt_molecules:
