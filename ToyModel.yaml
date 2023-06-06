@@ -138,7 +138,7 @@ interactions:
       k: 100.0
     bond: false
 bp_reactions:
-- bind:
+ bind:
   - educt:
     - Patch_1
     - Patch_3
@@ -217,7 +217,7 @@ bp_reactions:
       k: 100.0
       h: 50.0
       rc: 2.0
-- enzymatic:
+ enzymatic:
     educt:
     - Patch_2
     - Core_6
