@@ -53,25 +53,25 @@ molecules:
       - - 1.5
         - 0.0
         - -1.5
-      particles:
-      - Core_1
-      - Core_1
-      - Patch_1
-      - Patch_2
-      diffusion_tensor:
+    particles:
+    - Core_1
+    - Core_1
+    - Patch_1
+    - Patch_2
+    diffusion_tensor:
   B:
     positions:
       type: evenly_on_sphere
       sphere:
         num_points: 5
         radius: 2.5
-      particles:
-      - Core_2
-      - Patch_1
-      - Patch_1
-      - Patch_1
-      - Patch_1
-      diffusion_tensor:
+    particles:
+    - Core_2
+    - Patch_1
+    - Patch_1
+    - Patch_1
+    - Patch_1
+    diffusion_tensor:
   B2:
     positions:
       type: coordinates
@@ -91,13 +91,13 @@ molecules:
       - - 2.5
         - 0.0
         - -2.5
-      particles:
-      - Core_1a
-      - Core_2a
-      - Patch_1
-      - Patch_1
-      - Patch_2
-      diffusion_tensor:
+    particles:
+    - Core_1a
+    - Core_2a
+    - Patch_1
+    - Patch_1
+    - Patch_2
+    diffusion_tensor:
   C:
     positions:
       type: coordinates
@@ -105,10 +105,10 @@ molecules:
       - - 0.0
         - 0.0
         - 0.0
-      particles:
-      - Core_3
-      diffusion_tensor:
-      collision_type: 1
+    particles:
+    - Core_3
+    diffusion_tensor:
+    collision_type: 1
   D:
     positions:
       type: coordinates
@@ -116,10 +116,10 @@ molecules:
       - - 0.0
         - 0.0
         - 0.0
-      particles:
-      - Core_4
-      diffusion_tensor:
-      collision_type: 1
+    particles:
+    - Core_4
+    diffusion_tensor:
+    collision_type: 1
 interactions:
   harmonic_repulsion:
   - particle_1: Core_1
