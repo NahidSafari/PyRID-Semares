@@ -460,52 +460,53 @@ observations:
 run:
   progress_stride: 1000
   out_linebreak: false
-read_observable:
-- measure: Number
-- measure: Bonds
-- measure: Reactions
-  Reaction_Type: bind
-- measure: Reactions
-  Reaction_Type: fusion  
-plot_observable:
-- measure: Reactions
-  Reaction_Type: bind
-  educt: Patch_1+Patch_3
-  save_fig: true
-- measure: Reactions
-  Reaction_Type: enzymatic
-  educt: Patch_2+Core_6
-  save_fig: true
-- measure: Reactions
-  Reaction_Type: fusion
-  educt: A+B2
-  particle_educt: Core_1+Core_2a
-  save_fig: true
-- measure: Bonds
-  bond_pairs: All
-  save_fig: true
-- measure: Number
-  molecules:
-  - A
-  - B
-  - C
-  save_fig: true
-- measure: Energy
-  save_fig: true
-- measure: Pressure
-  save_fig: true
-- measure: Virial
-  save_fig: true
-- measure: Force
-  molecules:
-  - B
-  step: 10
-  save_fig: true
-- measure: Torque
-  molecules:
-  - B
-  step: 10
-  save_fig: true
+evaluation:
+  read_observable:
+  - measure: Number
+  - measure: Bonds
+  - measure: Reactions
+    Reaction_Type: bind
+  - measure: Reactions
+    Reaction_Type: fusion  
+  plot_observable:
+  - measure: Reactions
+    Reaction_Type: bind
+    educt: Patch_1+Patch_3
+    save_fig: true
+  - measure: Reactions
+    Reaction_Type: enzymatic
+    educt: Patch_2+Core_6
+    save_fig: true
+  - measure: Reactions
+    Reaction_Type: fusion
+    educt: A+B2
+    particle_educt: Core_1+Core_2a
+    save_fig: true
+  - measure: Bonds
+    bond_pairs: All
+    save_fig: true
+  - measure: Number
+    molecules:
+    - A
+    - B
+    - C
+    save_fig: true
+  - measure: Energy
+    save_fig: true
+  - measure: Pressure
+    save_fig: true
+  - measure: Virial
+    save_fig: true
+  - measure: Force
+    molecules:
+    - B
+    step: 10
+    save_fig: true
+  - measure: Torque
+    molecules:
+    - B
+    step: 10
+    save_fig: true
 plots:
 - type: mobility_matrix
   molecule: A
