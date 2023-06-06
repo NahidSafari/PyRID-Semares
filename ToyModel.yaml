@@ -514,6 +514,12 @@ plots:
   save_fig: true
 - type: concentration_profile
   save_fig: true
-- graph_type: Bimolecular
-- graph_type: Interactions
-- graph_type: Unimolecular
+- type: reactions
+  graph_type: Bimolecular
+  save_fig: true
+- type: reactions
+  graph_type: Interactions
+  save_fig: true
+- type: reactions
+  graph_type: Unimolecular
+  save_fig: true
