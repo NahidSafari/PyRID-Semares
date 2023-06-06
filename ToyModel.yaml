@@ -5,7 +5,7 @@ general:
   - 350.0
   dt: 0.1
   Temp: 293.15
-  eta: 1e-21
+  eta: 1.0e-21
   stride: 100
   write_trajectory: true
   boundary_condition: periodic
