@@ -120,6 +120,28 @@ molecules:
     - Core_4
     diffusion_tensor:
     collision_type: 1
+  E:
+    positions:
+      type: coordinates
+      coordinates:
+      - - 0.0
+        - 0.0
+        - 0.0
+    particles:
+    - Core_5
+    diffusion_tensor:
+    collision_type: 1
+  F:
+    positions:
+      type: coordinates
+      coordinates:
+      - - 0.0
+        - 0.0
+        - 0.0
+    particles:
+    - Core_6
+    diffusion_tensor:
+    collision_type: 1    
 interactions:
   harmonic_repulsion:
   - particle_1: Core_1
