@@ -218,7 +218,7 @@ bp_reactions:
       h: 50.0
       rc: 2.0
  enzymatic:
-    educt:
+  - educt:
     - Patch_2
     - Core_6
     product:
