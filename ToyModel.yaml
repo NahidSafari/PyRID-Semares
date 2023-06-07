@@ -224,8 +224,8 @@ bp_reactions:
     product:
     - Patch_3
     - Core_6
-    rpair_rates: 1.0
-    pair_Radii: 3.0
+    rates: 1.0
+    radius: 3.0
 up_reactions:
   conversion:
     - educt: Patch_1
