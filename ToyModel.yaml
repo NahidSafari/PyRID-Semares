@@ -224,7 +224,7 @@ bp_reactions:
     product:
     - Patch_3
     - Core_6
-    rates: 1.0
+    rate: 1.0
     radius: 3.0
 up_reactions:
   conversion:
