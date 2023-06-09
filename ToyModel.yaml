@@ -63,7 +63,7 @@ molecules:
     positions:
       type: evenly_on_sphere
       sphere:
-        num_points: 5
+        num_points: 4
         radius: 2.5
     particles:
     - Core_2
