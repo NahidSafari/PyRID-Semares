@@ -425,6 +425,7 @@ observations:
   - B
   - C
   obs_stride: 100
+  binned: true
 - measure: Torque
   molecules:
   - A
@@ -465,10 +466,9 @@ observations:
   binned: false
 - measure: Reactions
   obs_stride: 100
-  binned: false
+  binned: true
 - measure: Bonds
   obs_stride: 100
-  binned: false
 - measure: Orientation
   molecules:
   - A
